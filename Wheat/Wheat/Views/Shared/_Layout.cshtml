@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="../Content/Site.css" />
+    <link rel="stylesheet" href="~/Content/Goods.css" />
+    <script type="text/javascript" src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>北京音乐会_音乐会门票在线订购-大麦网北京站</title>
+    <meta name="keywords" content="北京音乐会,演出票,门票,在线订票,购票" />
+    <meta name="description" content="大麦网北京站为您提供北京音乐会门票信息及在线订购票服务,安全可靠,放心购买,大麦网全国统一服务热线:400-610-3721" />
+</head>
+
+<body>
+    <div class="top-w">
+        <div class="top">
+            <ul class="fl">
+                <li class="collect">
+                    <a onclick="addToFavorite();" href="javascript:void(0);">加入收藏</a>
+                </li>
+                <li class="info">
+                    <script>
+                        getNickName();
+                    </script>
+                </li>
+                <li class="mydamai">
+                    <a href="http://my.damai.cn/" target="_blank">我的大麦<span></span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="http://my.damai.cn/account/myinfo.aspx" target="_blank" title="个人信息">个人信息</a>
+                        </li>
+                        <li>
+                            <a href="http://order.damai.cn/index.aspx" target="_blank" title="订单管理">订单管理</a>
+                        </li>
+                        <li>
+                            <a href="http://my.damai.cn/trade/ewallet/myEwallet.aspx" target="_blank" title="我的钱包">我的钱包</a>
+                        </li>
+                        <li>
+                            <a href="http://my.damai.cn/interaction/myLighting.aspx" target="_blank" title="我的点亮">我的点亮</a>
+                        </li>
+                        <li>
+                            <a href="http://per.damai.cn/" target="_blank" title="大麦仓">大麦仓</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="fr">
+                <li class="cart">
+                    <a href="http://shopping.damai.cn/cart.aspx" target="_self">
+                        <span>购物车<strong id="cart_count">0</strong>件
+                        </span>
+                    </a>
+                </li>
+                <li class="guide">
+                    <a href="http://www.damai.cn/" target="_self">大麦导航</a>
+                    <div class="guide-list">
+                        <div class="bg"></div>
+                        <dl>
+                            <dt>分类：</dt>
+                            <dd>
+                                <ul>
+
+                                    <li>
+                                        <a href="http://www.damai.cn/projectlist.aspx?mcid=1" target="_blank" title="演唱会">演唱会</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.damai.cn/projectlist.aspx?mcid=2" target="_blank" title="音乐会">音乐会</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.damai.cn/projectlist.aspx?mcid=3" target="_blank" title="话剧歌剧">话剧歌剧</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.damai.cn/projectlist.aspx?mcid=4" target="_blank" title="舞蹈芭蕾">舞蹈芭蕾</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.damai.cn/projectlist.aspx?mcid=5" target="_blank" title="曲苑杂坛">曲苑杂坛</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.damai.cn/projectlist.aspx?mcid=6" target="_blank" title="体育比赛">体育比赛</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.damai.cn/projectlist.aspx?mcid=7" target="_blank" title="度假休闲">度假休闲</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.damai.cn/projectlist.aspx?mcid=8" target="_blank" title="周边商品">周边商品</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.damai.cn/projectlist.aspx?mcid=100" target="_blank" title="儿童亲子">儿童亲子</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://ball.damai.cn" target="_blank" title="球馆预订">球馆预订</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://movie.damai.cn/quickbuy.aspx" target="_blank" title="电影票">电影票</a>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>地区：</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <a title="北京" href="http://www.damai.cn/bj/" target="_blank">北京</a>
+                                    </li>
+                                    <li>
+                                        <a title="上海" href="http://www.damai.cn/sh/" target="_blank">上海</a>
+                                    </li>
+                                    <li>
+                                        <a title="深圳" href="http://www.damai.cn/sz/" target="_blank">深圳</a>
+                                    </li>
+                                    <li>
+                                        <a title="重庆" href="http://www.damai.cn/cq/" target="_blank">重庆</a>
+                                    </li>
+                                    <li>
+                                        <a title="广州" href="http://www.damai.cn/gz/" target="_blank">广州</a>
+                                    </li>
+                                    <li>
+                                        <a title="天津" href="http://www.damai.cn/tj/" target="_blank">天津</a>
+                                    </li>
+                                    <li>
+                                        <a title="武汉" href="http://www.damai.cn/wuhan/" target="_blank">武汉</a>
+                                    </li>
+                                    <li>
+                                        <a title="成都" href="http://www.damai.cn/cd/" target="_blank">成都</a>
+                                    </li>
+                                    <li>
+                                        <a title="杭州" href="http://www.damai.cn/hz/" target="_blank">杭州</a>
+                                    </li>
+                                    <li>
+                                        <a title="苏州" href="http://www.damai.cn/suz/" target="_blank">苏州</a>
+                                    </li>
+                                    <li>
+                                        <a title="南京" href="http://www.damai.cn/nj/" target="_blank">南京</a>
+                                    </li>
+                                    <li>
+                                        <a title="西安" href="http://www.damai.cn/xa/" target="_blank">西安</a>
+                                    </li>
+                                    <li>
+                                        <a title="香港" href="http://www.damai.cn/hk/" target="_blank">香港</a>
+                                    </li>
+                                    <li>
+                                        <a title="郑州" href="http://www.damai.cn/zhengzhou/" target="_blank">郑州</a>
+                                    </li>
+                                    <li>
+                                        <a title="宁波" href="http://www.damai.cn/ningbo/" target="_blank">宁波</a>
+                                    </li>
+                                    <li>
+                                        <a title="无锡" href="http://www.damai.cn/wuxi/" target="_blank">无锡</a>
+                                    </li>
+                                    <li>
+                                        <a title="哈尔滨" href="http://www.damai.cn/hrb/" target="_blank">哈尔滨</a>
+                                    </li>
+                                    <li>
+                                        <a title="大连" href="http://www.damai.cn/dl/" target="_blank">大连</a>
+                                    </li>
+                                    <li>
+                                        <a title="桂林" href="http://www.damai.cn/gl/" target="_blank">桂林</a>
+                                    </li>
+                                    <li>
+                                        <a title="常州" href="http://www.damai.cn/chz/" target="_blank">常州</a>
+                                    </li>
+                                    <li>
+                                        <a title="昆明" href="http://www.damai.cn/km/" target="_blank">昆明</a>
+                                    </li>
+                                    <li>
+                                        <a title="福州" href="http://www.damai.cn/fuzhou/" target="_blank">福州</a>
+                                    </li>
+                                    <li>
+                                        <a title="厦门" href="http://www.damai.cn/xiamen/" target="_blank">厦门</a>
+                                    </li>
+                                    <li>
+                                        <a title="南昌" href="http://www.damai.cn/nanchang/" target="_blank">南昌</a>
+                                    </li>
+                                    <li>
+                                        <a title="澳门" href="http://www.damai.cn/aomen/" target="_blank">澳门</a>
+                                    </li>
+                                    <li>
+                                        <a title="长沙" href="http://www.damai.cn/cs/" target="_blank">长沙</a>
+                                    </li>
+                                    <li>
+                                        <a title="佛山" href="http://www.damai.cn/foshan/" target="_blank">佛山</a>
+                                    </li>
+                                    <li>
+                                        <a title="南宁" href="http://www.damai.cn/nn/" target="_blank">南宁</a>
+                                    </li>
+                                    <li>
+                                        <a title="沈阳" href="http://www.damai.cn/sy/" target="_blank">沈阳</a>
+                                    </li>
+                                    <li>
+                                        <a title="东莞" href="http://www.damai.cn/dg/" target="_blank">东莞</a>
+                                    </li>
+                                    <li>
+                                        <a title="贵阳" href="http://www.damai.cn/gy/" target="_blank">贵阳</a>
+                                    </li>
+                                    <li>
+                                        <a title="合肥" href="http://www.damai.cn/hf/" target="_blank">合肥</a>
+                                    </li>
+                                    <li>
+                                        <a title="石家庄" href="http://www.damai.cn/sjz/" target="_blank">石家庄</a>
+                                    </li>
+                                    <li>
+                                        <a title="太原" href="http://www.damai.cn/ty/" target="_blank">太原</a>
+                                    </li>
+                                    <li>
+                                        <a title="青岛" href="http://www.damai.cn/qd/" target="_blank">青岛</a>
+                                    </li>
+                                    <li>
+                                        <a title="济南" href="http://www.damai.cn/jn/" target="_blank">济南</a>
+                                    </li>
+                                    <li>
+                                        <a title="温州" href="http://www.damai.cn/wenzhou/" target="_blank">温州</a>
+                                    </li>
+                                    <li>
+                                        <a title="中山" href="http://www.damai.cn/zs/" target="_blank">中山</a>
+                                    </li>
+                                    <li>
+                                        <a title="长春" href="http://www.damai.cn/chc/" target="_blank">长春</a>
+                                    </li>
+                                    <li>
+                                        <a title="泉州" href="http://www.damai.cn/quanzhou/" target="_blank">泉州</a>
+                                    </li>
+                                    <li>
+                                        <a title="银川" href="http://www.damai.cn/ych/" target="_blank">银川</a>
+                                    </li>
+                                    <li>
+                                        <a title="拉萨" href="http://www.damai.cn/ls/" target="_blank">拉萨</a>
+                                    </li>
+                                    <li>
+                                        <a title="洛阳" href="http://www.damai.cn/luoyang/" target="_blank">洛阳</a>
+                                    </li>
+                                    <li>
+                                        <a title="惠州" href="http://www.damai.cn/huizhou/" target="_blank">惠州</a>
+                                    </li>
+                                    <li>
+                                        <a title="柳州" href="http://www.damai.cn/lz/" target="_blank">柳州</a>
+                                    </li>
+                                    <li>
+                                        <a title="兰州" href="http://www.damai.cn/lanzhou/" target="_blank">兰州</a>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li class="help">
+                    <a href="#">客户服务</a>
+                    <div class="guide-list">
+                        <div class="bg"></div>
+                        <ul>
+                            <li><a href="http://www.damai.cn/helpcollect.html#selfservice" target="_blank">自助服务</a></li>
+                            <li><a href="http://www.damai.cn/helpcollect.html#onlineservice" target="_blank">人工服务</a></li>
+                            <li><a href="http://www.damai.cn/helpcollect.html#specialproducts" target="_blank">特色产品</a></li>
+                            <li><a href="http://www.damai.cn/helpindex.html" target="_blank">帮助中心</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="weibo">
+                    <iframe width="128" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" border="0" src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=136&height=24&uid=1722647874&style=2&btn=light&dpc=1"></iframe>
+                </li>
+                <li class="english">
+                    <div><span>中文</span><a href="http://en.damai.cn" target="_blank" title="http://en.damai.cn">English</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">@Html.ActionLink("将你的徽标放置在此处", "Index", "Home")</p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("展示", "Exhibit", "Performance")</li>
+                        <li>@Html.ActionLink("主页", "Index", "Home")</li>
+                        <li>@Html.ActionLink("关于", "About", "Home")</li>
+                        <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - 我的 ASP.NET MVC 应用程序</p>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,233 @@
+﻿@model Wheat.Models.PerformanceOrderModel
+@using System.Globalization;
+
+@{
+    ViewBag.Title = "Exhibit";
+}
+<div class="goods">
+    <div class="here">
+        <a href="http://www.damai.cn/">大麦网</a>&nbsp;&gt;&nbsp;
+        <a href="http://www.damai.cn/bj" id="Site">@Model.City</a>&nbsp;&gt;&nbsp;
+        <a href="http://www.damai.cn/bj/Perform-2/">@Model.Type</a>&nbsp;&gt;&nbsp;
+        <span>@Model.Title</span>
+    </div>
+    <div class="title">
+        <h1>@Model.Title</h1>
+    </div>
+    <div class="goods-basic">
+        <!--项目图片-->
+        <div class="goods-basic-poster">
+            <!--项目图片-->
+            <img src="@Model.Poster" alt="天空之城－宫崎骏·久石让动漫视听音乐会" title="天空之城－宫崎骏·久石让动漫视听音乐会" width="277" height="373" />
+        </div>
+        <div class="goods-basic-list">
+            <!--项目基础信息及支持图标-->
+            <div class="b-top-detal">
+
+                <div class="b-ri-tp-icons">
+                    <p class="mb5 tc" style="width: 156px;">
+                        <a title="大麦总代" href="javascript:void(0)" target="_blank">
+                            <img src="/img/ico-zd.png" alt="大麦总代"></a>
+                        <br />
+                        <a title="maitix" href="javascript:void(0)" target="_blank">
+                            <img src="/img/ico-mtx2.png" alt="maitix"></a>
+                    </p>
+                </div>
+                <ul>
+                    <li>
+                        <label for="" class="t">评&#12288;&#12288;论：</label>
+                        <div class="ri-t">
+                            <div class="b-star"><span id="star"></span></div>
+                            <span class="b-score"><strong id="scoreInfo"></strong></span>
+                            <span class="b-join-pop">（<a href="javascript:void(0)" onclick="jupingclick(1)"><span id="MessageCountInfo"></span>人参与评论</a>）&nbsp;|</span><a href="javascript:void(0)" target="_blank">发表评论</a>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="" class="t">时&#12288;&#12288;间：</label>
+                        <div class="ri-t">
+                            <time itemprop="startDate" datetime="2014-09-06T19:30">@Model.Time</time>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="" class="t">场&#12288;&#12288;馆：</label>
+                        <div class="ri-t">
+                            <span class="mr15">
+                                <a class="c3" href="javascript:void(0)" title="@Model.Place" target="_blank"><span itemprop="location" itemscope itemtype="javascript:void(0)">​<span itemprop="name">@Model.Place</span></span></a>  <a href="http://www.damai.cn/GotoMap.do?id=12" target="_blank">[交通线路]</a>        </span>
+                        </div>
+                    </li>
+                    <li class="b-sub-item">
+                        <label for="" class="t">支&#12288;&#12288;持：</label>
+                        <div class="b-sub-item-tab">
+                            <dl>
+                                <dt>
+                                    <a class="i1" href="#">选座</a>
+                                </dt>
+                                <dd class="b-sub-item-con" style="display: none;">
+                                    <p>本项目支持自助选座。</p>
+                                    <p>1. 选择演出时间，并点击"选座购买"进入选座页面。</p>
+                                    <p>2. 选座后，在15分钟内支付成功，选座生效。</p>
+                                    <a class="b-close" href="#">关闭</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a class="i3" href="#">超级票</a>
+                                </dt>
+                                <dd class="b-sub-item-con" style="display: none;">
+                                    <p>1.本项目支持使用【电子钱包-超级票账户】消费，支付时优先扣减超级票余额。</p>
+                                    <p>2.超级票成功充值电子钱包后，享受全网通兑、分次消费、无有效期限制、无使用张数限制、秒杀、抢票等服务。</p>
+                                    <a class="b-close" href="#">关闭</a>
+                                </dd>
+                            </dl>
+
+                            <dl>
+                                <dt>
+                                    <a class="i4" href="#">电子钱包</a>
+                                </dt>
+                                <dd class="b-sub-item-con" style="display: none;">
+                                    <p>本项目支持电子钱包。</p>
+                                    <p>1. 电子钱包是由大麦网自主研发的第三方支付平台</p>
+                                    <p>2. 为每一个用户在购票过程中提供"简单、安全、快速"的在线支付解决方案</p>
+                                    <a class="b-close" href="#">关闭</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a class="i5" href="#">电子票</a>
+                                </dt>
+                                <dd class="b-sub-item-con" style="display: none;">
+                                    <p>本项目支持大麦电子票，方式包括：。</p>
+                                    <a class="b-close" href="#">关闭</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a class="i6" href="#">返积分</a>
+                                </dt>
+                                <dd class="b-sub-item-con" style="display: none;">
+                                    <p>可获得积分=本单消费金额*50%</p>
+                                    <p>1. 大麦积分商城上百种商品可供挑选，全场12分起。</p>
+                                    <p>2. 演出周边、票款冲抵、粉丝特选、每周更新。</p>
+                                    <a class="b-close" href="#">关闭</a>
+                                </dd>
+                            </dl>
+                            <!--添加场馆换票链接
+         design by:zhengchenglong
+         update:2014-02-28
+         -->
+                            <dl>
+                                <dt>
+                                    <a class="i9" target="_blank" href="javascript:void(0)">自助换票</a>
+                                </dt>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="b-transport-city">
+                        <label for="" class="t">运&#12288;&#12288;至：</label>
+                        <div class="ri-t">
+                            <span class="b-add-box">
+                                <a href="javascript:void(0)" id="selectArea" pid="0" cid="852" class="c_toggle">北京</a>
+                            </span>
+                            <span class="b-add-txt" id="DeliveryPrice">加载中...</span>
+                        </div>
+                        <div id="delivery" class="b-citys-box">
+                            <ul>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="ticketmodel">
+                <div class="b-option-wrap">
+                    <!--项目状态信息及状态说明-->
+                    <div class="b-option-note">
+                        <div class="b-notes">
+                            <div class="fl">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TicketSiteStatus" class="b-option-state">
+                        销售中
+                    </div>
+                    <!--倒计时-->
+                    <input type="hidden" name="Countdown" id="Countdown" value="" />
+                    <!--倒计时 结束-->
+                    <div class="b-select-layer">
+                        <div class="title">
+                            <span class="fl">请选择您要的商品信息</span>
+                            <a class="b-close" href="javascript:void(0)"></a>
+                        </div>
+                        <dl class="b-select-date b-perform-times b-one-date">
+                            <dt>演出时间：</dt>
+                            <dd id="perform">@Model.Time.ToString("yyyy年M月d日　ddd　hh:mm", CultureInfo.CreateSpecificCulture("zh-CN"))</dd>
+                        </dl>
+                        <dl class="b-select-price">
+                            <dt>选择价格：</dt>
+                            <dd id="price"><i id="6097074"></i>
+                                @{
+                                    foreach (var t in Model.Tickets)
+                                    {
+                                        if (t.RestNumber == 0)
+                                        {
+                                            <text><a href ="javascript:void(0);" class="grey">@t.Price</a></text>;
+                                        }
+                                        else
+                                        {
+                                            <text><a href="javascript:void(0);">@t.Price</a></text>;
+                                        }
+                                    }
+                                }
+                            </dd>
+                        </dl>
+                        <dl class="b-selected-infos">
+                            <dt>您选择了：</dt>
+                            <dd>
+                                @{
+                                    foreach (var t in Model.Tickets)
+                                    {
+                                        <p>
+                                            <span id="cart">
+                                                <span class="b-t">
+                                                    "<span>@t.Price</span>"
+                                                </span>
+                                            </span>
+                                            <span class ="b-nums">
+                                                数量：
+                                                <span class="add">
+                                                    <span class="add"></span>
+                                                    <input type="text" onkeyup="blurPrice(this)" maxlength="2" class="nums" name="" value="1" />
+                                                    <span class="low"></span>
+                                                    <a class="b-delete" href="javascript:void(0);" onClick="$(this).parent().parent().remove()">删除</a>
+                                                </span>
+                                            </span>
+                                        </p>
+                                    }
+                                }
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>&nbsp;</dt>
+                            <dd>
+                                <input id="hidgo" type="hidden" value="0" />
+                                <p id="secondButton" style="display: none">
+                                    <input id="confirminfo" class="b-refer-btns" style="display: none;" value="提交" type="button" />
+                                </p>
+                                <p id="buttondiv">
+                                    <input class="b-buy01-btns hidden" id="btnXuanZuo" type="button" value="选座购买" />
+                                    <input class="b-buy02-btns" id="btnNowBuy" type="button" value="立即购买" />
+                                    <input type="button" id="inputCart" class="b-shopping-cart-btns  " value="放入购物车" />
+                                </p>
+                                <input type="hidden" name="QueHuoNums" id="QueHuoNums" value="0" />
+                                <p class="b-bt-msg hidden" id="Shortage">
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <input type="hidden" id="tnum" value="20" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--选项卡 begin-->
+</div>

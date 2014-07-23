@@ -1,0 +1,711 @@
+﻿@charset "utf-8";
+/*------------------------------------------------
+CSS Create: 2012-9-11         Author: JiangKai
+CSS Last Update: 2012-9-11 21:34 By JiangKai
+*Filename:                    goods.css
+*Version:                     2.0.0
+*Website:                     www.damai.cn
+*Page width:                  1000px
+------------------------------------------------*/
+
+body { line-height: 1;}
+
+.goods { width: 1000px; margin: 0 auto;}
+.goods .here { height: 40px; line-height: 40px; font: 12/40px \5b8b\4f53; border-bottom: 1px solid #efefef; color: #999;}
+.goods .here span { color: #333;}
+.goods h1 { padding:15px 0;width:780px; font:bold 18px/30px \5fae\8f6f\96c5\9ed1;}
+.goods h1 a.notice{color: #2f97b4; padding-left: 10px; font-size:12px; font-weight:normal}
+.goods h1 a.notice:hover { color: #e51a45;}
+
+.goods-basic {*zoom: 1; padding-bottom:70px}
+.goods-basic:after{content:'\20';display:block;height:0;clear:both;}
+.goods-basic-poster { border: 1px solid #ccc; padding: 10px; background-color: #fcfaf9; float: left; width: 277px; overflow: hidden;}
+.goods-basic-poster img { width: 277px;}
+.goods-basic-poster .links { width:277px; height: 34px; background: url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) repeat-x scroll 0 -1140px; border-bottom: 1px solid #e1e1e1; padding: 5px 0; font-size: 16px;}
+.goods-basic-poster .links a { display: block; float: left; width: 87px; height: 34px; line-height: 34px; padding-left: 50px; font-family:"Microsoft YaHei"}
+.goods-basic-poster .links a.links-1 { border-right: 1px solid #e1e1e1; background: url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) -431px -244px no-repeat;}
+.goods-basic-poster .links a.links-1:hover { background-position: -431px -294px; color: #333;}
+.goods-basic-poster .links a.links-2 { border-left: 1px solid #fff; background: url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) -431px -344px no-repeat; width: 88px;}
+.goods-basic-poster .links a.links-2:hover { background-position:-431px -394px; color: #333;}
+.goods-basic-poster .share { width: 282px; padding: 20px 0 10px 0; overflow: hidden; zoom: 1;}
+.goods-basic-poster .share span { display: block; float: left; font: 15px/32px \5fae\8f6f\96c5\9ed1;}
+.goods-basic-poster .share div { float: right; overflow: hidden; zoom: 1;}
+.goods-basic-list { width: 675px; float: right;}
+
+.goods-detail { clear: both; width: 760px; float: left; }
+.goods-side { width: 230px; float: right;}
+
+/* 城市演出分类 begin */
+.city-sort{width:198px;margin:-37px 0 0 -1px;float:left;border:2px solid #e51a45;border-top:0;position:absolute;background-color:#fff}
+.city-sort .sort-title{width:170px;height:37px;background:url(http://dui.damai.cn/damai_v2/common/img/bg-index-common.png) 0 -360px repeat-x;font:14px/35px \5fae\8f6f\96c5\9ed1;color:#fff;padding-left:30px;position:absolute;top:0;left:-1px}
+.city-sort .sort-title a{color:#fff}
+.city-sort .sort-title a:hover{text-decoration:underline}
+.city-sort .sort-title .arrow{display:block;width:0;height:0;font-size:0;overflow:hidden;border-style:solid dashed dashed dashed;border-width:5px;border-color:#fff transparent transparent transparent;position:absolute;right:20px;top:16px}
+.city-sort.on .sort-title .arrow{border-color:transparent transparent #fff transparent;border-style:dashed dashed solid dashed;top:11px}
+.city-sort .sort-var{width:190px;height:180px;margin:37px 0 0 8px;*padding-top:37px;overflow:hidden;display:none}
+.city-sort.on .sort-var{display:block}
+.city-sort .sort-var li{display:inline;float:left;margin:9px 7px 0 0;width:86px;height:32px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:1px solid #e3e3e3}
+.city-sort .sort-var li a{display:block;width:84px;height:30px;line-height:30px;text-align:center;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;color:#333;margin:1px;overflow:hidden}
+.city-sort .sort-var li a:hover,.city-sort .sort-var li.on a{background-color:#e51a45;color:#fff}
+.city-sort .sort-var .unable a:hover,.city-sort .sort-var .unable a{background:#efefef;color:#b3b3b3;cursor:default}
+/* 城市演出分类 end *
+
+/*------------------------------------------------
+Styles Create: 2012-9-11      Author: GuoJinjin
+*Description:                  购票 start
+------------------------------------------------*/
+.b-top-detal{ border-bottom:1px solid #efefef; padding-bottom:5px; padding-top:10px; margin-bottom:20px; position:relative; z-index:96}
+.b-top-detal li{ padding-bottom:5px; padding-left:15px;*zoom:1; line-height:22px;}
+.b-top-detal li:after,.b-option-wrap:after,.b-option-wrap dl:after,.b-option-wrap .b-con-pd dt:after,.b-option-wrap .b-con-pd dd:after{ content:'\20'; display:block; height:0; clear:both;}
+.b-top-detal .b-star{ background: url(http://dui.damai.cn/damai_v2/common/img/bg-star-1.png) repeat-x scroll 0 -15px;height: 15px;width: 90px;margin-top:3px; float:left}
+.b-top-detal .b-star span{ background: url(http://dui.damai.cn/damai_v2/common/img/bg-star-1.png) repeat-x scroll 0 0;display: block;
+height: 15px;}
+.b-top-detal .b-score{font-size: 20px;padding: 0 10px; color:#E51A45}
+.b-top-detal .b-join-pop{ color:#999; padding-right:10px}
+.b-top-detal .b-join-pop span{color:#E51A45}
+.b-top-detal a{ color:#2f97b4; position:relative; z-index:98}
+.b-top-detal a:hover,.b-selected-infos .b-delete:hover,.b-con-pd dt a:hover,.b-con-pd dd .more:hover,.b-con-pd dd li a:hover,.b-option-note .ri-a:hover,.b-prepay-con .b-table01 td a:hover{color:#E51A45}
+.b-top-detal label.t{ color:#999; float:left; width:65px;}
+.b-top-detal .ri-t{ width:590px; float:left; color:#666}
+.b-top-detal .ri-t a{ padding-right:10px}
+
+.b-top-detal .b-sub-item { position: relative; z-index: 100; padding-bottom:8px}
+.b-top-detal .b-sub-item label { line-height: 21px;}
+.b-top-detal .b-sub-item-tab { position: absolute; z-index: 97; left: 80px;}
+.b-top-detal .b-sub-item-tab dt { margin-left: -1px;}
+.b-top-detal .b-sub-item-tab dt a { border-left: 1px dotted #d9d9d9; border-top: 1px solid #fff; border-right: 1px solid #fff; color: #666; line-height: 20px; padding: 0 8px 0 26px; background: url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll 8px -215px; display: inline-block;}
+.b-top-detal .b-sub-item-tab dt a.i2 { background-position: 8px -268px;}
+.b-top-detal .b-sub-item-tab dt a.i3 { background-position: 8px -324px;}
+.b-top-detal .b-sub-item-tab dt a.i4 { background-position: 8px -378px;}
+.b-top-detal .b-sub-item-tab dt a.i5 { background-position: 8px -432px;}
+.b-top-detal .b-sub-item-tab dt a.i6 { background-position: 8px -484px;}
+.b-top-detal .b-sub-item-tab dt a.i7 { background-position: 8px -534px;}
+.b-top-detal .b-sub-item-tab dt a.i8 { background-position: 8px -215px;}
+.b-top-detal .b-sub-item-tab dt a.i9 { background-position: 8px -1333px;}
+.b-top-detal .b-sub-item-tab dt a.i9.on { border:none; }
+.b-top-detal .b-sub-item-tab dt a.i10 { background-position: 8px -1381px;}
+.b-top-detal .b-sub-item-tab dt a.on { border: 1px solid #ccc; border-bottom: none; background-color: #fff; position: relative; z-index: 110;}
+.b-top-detal .b-sub-item-tab dt a.link { border-left: 1px dotted #d9d9d9; border-top: 1px solid #fff; border-right: 1px solid #fff; }
+.b-top-detal .b-sub-item-con { border: 1px solid #ccc; padding: 10px; line-height: 22px; color: #999; position: absolute; z-index: 105; top: 20px; left: -1px; width:574px; background:#fff; display:none; *zoom:1;}
+.b-sub-item-tab dl { float: left;}
+.b-top-detal .b-sub-item-con a.b-close{ color:#e51a45; position:absolute; right:10px; bottom:10px;}
+.b-top-detal .b-sub-item-tab dt a:hover{ color:#e51a45}
+
+.b-top-detal .b-transport-city{position:relative; z-index:99}
+.b-transport-city .b-add-box{ border:1px solid #dcdcdc; height:20px; padding:0 5px 0 0; line-height:20px; display:inline-block; margin-right:10px}
+.b-transport-city .b-add-box a{background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll right -777px; padding-right:12px; padding-left:5px; color:#333;display:inline-block}
+.b-transport-city .b-citys-box{ border:2px solid #FF96AC; background:#fff; padding:10px 15px; line-height:25px; position:absolute; left:80px; top:22px; width:300px; cursor:pointer; display:none}
+.b-transport-city .b-citys-box a{ padding-left:1%; width:19%; float:left; color:#333; overflow:hidden; height:25px;}
+.b-transport-city .b-citys-box a:hover{color:#e51a45;}
+
+.b-option-wrap{ position:relative; z-index:95;background:#f7f7f7;border:1px solid #efefef; margin-bottom:15px; padding-bottom:5px; min-height:200px\9;}
+.b-option-state{color:#e51a45; font-size:16px; font-family:"Microsoft YaHei"; width:99px; height:35px; padding-left:15px; line-height:35px; margin-bottom:20px; font-weight:bold;}
+.b-option-note{ position:absolute; right:-1px;_right:-2px; top:-1px; background:#fff; border-left:1px solid #efefef; border-bottom:1px solid #efefef; width:558px; height:35px; z-index:88}
+.b-option-note .b-notes{ width:545px; overflow:hidden;zoom:1;padding:5px 0 0 10px;line-height:22px; float:right; _position:absolute; _right:0; _top:0;border:1px solid #fff;}
+.b-option-note .b-notes .fl{ width:470px; color:#999; height:20px; overflow:hidden; white-space:nowrap;text-overflow:ellipsis;}
+.b-option-note .b-notes a{background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll right 9px; padding-right:13px; margin-right:10px; _display:inline; color:#2f97b4; float:right}
+.b-option-note .b-notes a.on{background-position:right -43px; border:none;}
+.b-option-note .b-notes.on{border:1px solid #f2daaa; background:#fffceb; padding-bottom:10px}
+.b-option-note .b-notes.on .fl{ height:auto; white-space:normal}
+.b-option-note .ri-a{color:#2f97b4; float:right; line-height:35px;}
+
+.b-option-wrap dl{ padding-bottom:20px;*zoom:1; padding-left:15px; clear:both}
+.b-option-wrap dt{ width:65px; float:left; color:#999}
+.b-option-wrap dd{ width:525px;_width:528px; float:left}
+.b-option-wrap dd .hidden{ display:none}
+
+.b-select-date dt{ line-height:36px;}
+.b-select-date dd a{ width:100px; height:34px; border:1px solid #e9e9e9; background:#fff; text-align:center; line-height:17px; color:#333; padding:2px 0; float:left; margin:0 3px 3px 0; _display:inline;}
+.b-select-date dd a:hover{ color:#e51a45; border:1px solid #e51a45}
+.b-select-date dd a.on,.b-select-price dd a.on{ border:2px solid #df0001; width:98px; height:34px;background:#fff url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll right -87px; padding:1px 0;}
+.b-select-date dd a.on:hover{ color:#e51a45; border:2px solid #df0001;}
+.b-select-date .b-more{ text-align:right; clear:both; padding-top:5px}
+.b-select-date .b-more span{background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll right 5px; padding-right:13px; margin-right:10px; _display:inline; color:#2f97b4; cursor:pointer}
+.b-select-date .b-more span.on{background-position:right -47px;}
+.b-select-date .b-more span:hover{ color:#E51A45}
+/*2013-8-9 场次置灰 by GuoJinjin*/
+.b-select-date dd a.grey{ color:#bfbfbf; border:1px solid #c7c7c7; background:#ededed; z-index:1}
+.b-select-date dd a.grey:hover{color:#bfbfbf;border:1px solid #c7c7c7;}
+.b-select-date dd a.on.grey{ color:#bfbfbf;border:2px solid #c7c7c7; width:98px; height:34px;background:#ededed url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll right -714px; padding:1px 0; z-index:1}
+.b-select-date dd a.on.grey:hover{color:#bfbfbf;border:2px solid #c7c7c7;}
+
+.b-one-date dd { line-height:36px; }
+.b-one-date dd a { display:none; }
+
+.b-select-price{ position:relative; z-index:75}
+.b-select-price dt{ line-height:26px;}
+.b-select-price dd{ line-height:26px;}
+.b-select-price dd a{ min-width:40px;  height:24px; border:1px solid #e9e9e9; background:#fff; text-align:center; line-height:24px; color:#333; padding:0 10px; float:left; margin:0 3px 3px 0; _display:inline;*white-space:nowrap}
+.b-select-price dd a.on,.b-select-price dd a.on:hover{ width:auto; height:22px; line-height:22px; _overflow:hidden; padding:0 9px; background-position:right -101px}
+.b-select-price dd a:hover{ color:#e51a45; border:1px solid #e51a45}
+.b-select-price dd a.on:hover{color:#e51a45;border:2px solid #df0001;}
+.b-select-price dd a.grey{ color:#bfbfbf; border:1px dashed #c7c7c7; background:#ededed; position:relative; z-index:1}
+.b-select-price dd a.grey:hover{color:#bfbfbf;border:1px dashed #c7c7c7;}
+.b-select-price .b-tips{ position:absolute; left:0; top:24px; background:#fffceb; border:1px solid #f2daaa; white-space:nowrap; color:#e51a45; padding:0 9px; display:none}
+.b-select-price .b-tips strong,.b-countdown .count-down-msg strong{background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll 0 -592px; width:9px; height:6px; display:inline-block; overflow:hidden; position:absolute; left:24px; top:-6px;}
+.b-countdown .count-down-msg{ position:absolute;  left:120px; bottom:-30px; line-height:25px; background:#fffceb; border:1px solid #f2daaa; white-space:nowrap; color:#e51a45; padding:0 9px; display:none; font-size:12px; font-weight:normal; padding:0 10px}
+
+.b-perform-times{ line-height:20px;}
+.b-perform-times dd{ font-size:16px; font-weight:bold;}
+.b-time-msg02{ line-height:34px;color:#e51a45;}
+
+.b-option-wrap .b-selected-infos{ padding-bottom:15px}
+.b-selected-infos p{ padding-bottom:10px;}
+.b-selected-infos .b-t{ color:#999; padding-right:8px}
+.b-selected-infos .b-t span{ color:#e51a45}
+.b-selected-infos .b-nums{ padding-left:8px}
+.b-nums .add,.b-nums .low{ background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll 0 -157px; width:16px; height:15px; display:inline-block; cursor:pointer; overflow:hidden; vertical-align:middle;}
+.b-nums .low{ background-position:5px -178px}
+.b-nums .nums{ width:35px; height:18px; line-height:18px; overflow:hidden; text-align:center; background:#fff; border:1px solid #c4c4c4;vertical-align:middle;}
+.b-selected-infos .b-delete{ color:#2f97b4; margin:0 10px}
+
+.b-buy01-btns,.b-buy02-btns,.b-shopping-cart-btns,.b-starting-btns,.b-destine-btns,.b-login-btn01,.b-buy01-btns-disabled,.b-buy02-btns-end,.b-buy02-btns-disabled,.b-shopping-cart-btns-disabled,.b-sell-btns{ background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat; width:130px; height:34px; border:none; cursor:pointer; text-indent:-9999px; margin-right:10px; *display:block; *float:left}
+.b-buy01-btns:hover{ background-position:0 -34px;}
+.b-buy02-btns{background-position:-130px 0px;}
+.b-buy02-btns:hover{background-position:-130px -34px;}
+.b-shopping-cart-btns{background-position:-260px 0px;}
+.b-shopping-cart-btns:hover{background-position:-260px -34px;}
+.b-starting-btns,.b-sell-btns{ width:139px; height:34px; cursor:inherit; background-position:-0 -136px;}
+.b-destine-btns{background-position:-260px -68px;}
+.b-destine-btns:hover{background-position:-260px -102px;}
+.b-login-btn01{background-position:-130px -68px; margin:5px auto 0; float:none}
+.b-login-btn01:hover{background-position:-130px -102px;}
+.b-buy01-btns-disabled{background-position:-139px -136px; cursor:default}
+.b-buy02-btns-end{background-position:0 -170px; cursor:default}
+.b-buy02-btns-disabled{background-position:-139px -170px; cursor:default}
+.b-shopping-cart-btns-disabled{background-position:-139px -204px; cursor:default}
+.b-sell-btns{background-position:0 -250px;}
+
+.b-bt-msg{ padding:15px 0 0; color:#999; clear:both;zoom:1}
+.b-bt-msg span{ color:#333;}
+
+.b-bt-actives .title{ color:#e51a45; font-weight:bold; padding-left:15px; line-height:30px; height:30px; border-bottom:1px solid #efefef}
+.b-bt-actives .b-con{ padding:10px 15px; line-height:18px; color:#666;}
+.b-bt-actives .b-con p{ padding-bottom:10px;}
+
+.b-reserve-infos{ border-bottom:1px dotted #e0e0e0; margin:0 7px; line-height:25px; color:#666; padding:0 5px 5px;}
+
+.b-option-wrap .b-information{ border-top:1px dotted #fff; margin:0 7px; padding:10px 0;}
+.b-option-wrap .b-information dl{ padding-bottom:15px;}
+.b-option-wrap .b-information dt{ line-height:26px;}
+.b-information .b-inp{ width:152px; height:20px; background:#fff; line-height:20px; border:1px solid #ccc; overflow:hidden; margin-right:5px; padding:2px 3px;}
+.b-information .col{ color:#ff0066;}
+.b-information .b-text{ width:392px; height:94px; border:1px solid #ccc; padding:2px 3px;}
+.b-refer-btns{ background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll 0 -68px; width:120px; height:32px; border:none; cursor:pointer; font-size:14px; color:#fff; font-weight:bold;}
+.b-refer-btns:hover{ background-position:0 -100px;}
+
+.b-con-pd{ padding:0 15px 15px;}
+.b-state-infos{ color:#333; font-size:14px; padding-bottom:15px;}
+.b-option-wrap .b-con-pd dl{ padding-left:0}
+.b-option-wrap .b-con-pd dt{ width:100%; line-height:25px;*zoom:1}
+.b-con-pd dt .title{ font-size:16px; color:#e51a45; font-family:"Microsoft YaHei"; float:left; line-height:25px; height:auto}
+.b-con-pd dt a{ float:right; color:#2f97b4}
+.b-option-wrap .b-con-pd dd{*zoom:1; line-height:25px; width:100%}
+.b-con-pd dd li{ background:url(http://dui.damai.cn/damai_v2/goods/img/icon_i1.png) no-repeat scroll 0 center; padding-left:10px; width:280px; height:25px; white-space:nowrap; display:block;_display:inline; float:left; overflow:hidden;text-overflow:ellipsis; margin-right:30px}
+.b-con-pd dd li a{color:#666;}
+.b-con-pd dd .more{ float:right; color:#2F97B4}
+
+.b-countdown{ background:url(http://dui.damai.cn/damai_v2/goods/img/time.png) no-repeat; width:490px; height:62px; line-height:62px; padding-left:9px; padding-top:10px; position:relative; top:-10px; left:-7px; z-index:89; color:#fff; font-size:18px; font-family:"Microsoft YaHei"; float:left;_padding-top:22px;_height:50px; _line-height:45px; margin-bottom:10px}
+.b-countdown span{ padding:0 2px; float:left}
+.b-countdown .times{ float:left}
+
+.b-prepay-state{ width:174px; float:right; height:75px; margin-bottom:10px; *margin-bottom:0;}
+.b-prepay-state .fon1{ padding-top:15px; color:#666; line-height:20px; padding-right:30px}
+.b-prepay-state .fon2{ font-size:40px; color:#e51a45; line-height:40px}
+.b-prepay-state .fon3{ color:#999;}
+.b-prepay-state .fon3 span,.b-prepay-state .fon4 span{ font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:14px; color:#e51b46}
+.b-prepay-state .fon4{ color:#666; padding:0 20px 0 0;line-height:18px;}
+.b-prepay-state .fon4 span{ font-size:12px}
+.b-prepay-state .fon4 a{ color:#2f97b4; margin-left:10px}
+.b-prepay-state .fon4 a:hover{color:#e51a45;}
+.b-prepay-state .fon5{ font-size:20px; color:#e51a45; line-height:30px}
+
+.b-prepay-con{ margin-bottom:15px}
+.b-prepay-con .title{ background:url(http://dui.damai.cn/damai_v2/goods/img/bg_bt01.png) repeat-x; height:39px; display:block}
+.b-prepay-con .title li{ width:103px; float:left;}
+.b-prepay-con .title li a{width:103px; height:39px; float:left; background:url(http://dui.damai.cn/damai_v2/goods/img/btn_prepay.png) no-repeat; color:#999; line-height:39px; text-align:center}
+.b-prepay-con .title li a:hover{background-position:0 -39px; color:#999; }
+.b-prepay-con .title li a.on,.b-prepay-con .title li a.on:hover{background-position:0 -78px; color:#666; font-weight:bold}
+.b-prepay-con .b-table01{ border:none;}
+.b-prepay-con .b-table01 th{background:url(http://dui.damai.cn/damai_v2/goods/img/bg_bt01.png) repeat-x scroll 0 -50px;}
+.b-prepay-con .b-table01 th span{ height:30px; display:block; color:#fff; text-align:center;  line-height:30px; background:url(http://dui.damai.cn/damai_v2/goods/img/bg_bt01.png) no-repeat scroll right -110px}
+.b-prepay-con .b-table01 td{ padding:5px 0; text-align:center; border-bottom:1px dashed #cdcdcd; color:#666;line-height:20px}
+.b-prepay-con .b-table01 td a{ color:#2F97B4}
+.b-seat-btn01,.b-waitting-btn01{ background:url(http://dui.damai.cn/damai_v2/goods/img/btn_prepay.png) no-repeat scroll 0 -118px; height:28px; width:80px; text-align:center; line-height:28px; border:none; cursor:pointer; color:#fff}
+.b-seat-btn01:hover{background-position:0 -146px;}
+.b-waitting-btn01{background-position:0 -174px; cursor:inherit; color:#bfbfbf}
+
+.b-prepay-info{ height:160px; overflow-y:scroll}
+.b-prepay-info li{ line-height:31px; border-bottom:1px dashed #cdcdcd; color:#999; padding-left:10px}
+.b-prepay-info li .b-msg-infos{ color:#666; margin:0 10px}
+.b-prepay-info li a.c4:hover{ text-decoration:underline}
+
+.b-select-layer {_position:relative}
+.b-select-layer .title{ display:none;}
+.b-select-box1 .b-option-state{ margin-bottom:0}
+.b-select-box1 .b-select-layer{ background:#FFF;border: 1px solid #999;position:relative;left:-1px;top:0px; min-height:300px; width:673px; z-index:90;}
+.b-select-box1 .b-select-layer .title{ display:block; background:#E51A45;color:#FFF;line-height: 25px; height:25px; margin-bottom:25px;}
+.b-select-box1 .b-select-layer .title span{ float:left; padding-left:10px}
+.b-select-box1 .b-select-layer .title .b-close{ background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll 3px -822px; width:15px; height:15px; float:right; margin:5px 10px 0 0; _display:inline}
+.b-ing{ padding-left:15px; padding-bottom:27px;}
+.b-ing p{ padding-top:10px}
+
+.b-bt-msg span.b-note{ position:relative; color:#2F97B4;}
+.b-bt-msg span.b-note:hover{ color:#e51a45}
+.b-note .b-note-cons{ border:1px solid #DCDCDC; background:#FFFEEC; position:absolute; left:-35px; top:15px; line-height:20px; padding:5px; width:511px; display:none}
+
+.b-ri-tp-icons{ position:absolute; right:0; top:-56px; float:right; text-align:right}
+.b-ri-tp-icons p{ color:#666; line-height:20px;}
+.b-ri-tp-icons p span{ color:#e51b46; font-size:16px; font-weight:bold;}
+.b-ri-tp-icons p a{ text-decoration:underline}
+.b-ri-tp-icons p.mb10 a{*display:block; *width:108px; *height:89px;}
+
+
+/* Modified By GuoJinjin At 2013-06-08 */
+.b-buy-tips02 { background:#fffceb url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll 18px -800px; padding:0 0 0 45px; line-height:27px; border:1px solid #f2daaa; display:inline-block; color:#000; width:369px;}
+.down-a4 { position:relative;zoom:1}
+.down-a4 ul { width:220px; margin:0 auto; }
+.down-a4-li01 { height:28px; padding-top:26px; background:url(http://dui.damai.cn/damai_v2/goods/img/a4-icon.png) no-repeat -278px 32px; padding-left:25px; }
+.down-a4-li02 { background-position:-278px -178px; }
+.down-a4-li01 a { height:28px; display:inline-block; background:url(http://dui.damai.cn/damai_v2/goods/img/a4-icon.png) no-repeat; width:80px; margin-right:15px; }
+.down-a4-li01 .down-a4-li01-iphone:active { background-position:0 -112px; }
+.down-a4-li01 .down-a4-li01-ipad { background-position:0 -28px; }
+.down-a4-li01 .down-a4-li01-ipad:active { background-position:0 -140px; }
+.down-a4-li01 .down-a4-li01-phone { background-position:0 -56px; }
+.down-a4-li01 .down-a4-li01-phone:hover { background-position:0 -168px; }
+.down-a4-li01 .down-a4-li01-pad { background-position:0 -84px; }
+.down-a4-li01 .down-a4-li01-pad:active { background-position:0 -196px; }
+
+.down-tips-box { display:none; width:216px; height:110px; position:absolute; top:0; left:50%; margin-left:-108px; border: 2px solid #b8e0e5; background:#eefcff;}
+.down-tips-box .down-tips-del { display:block; width:10px; height:10px; float:right; background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll 0 -904px; margin:5px 5px 0 0;}
+.down-tips-box p { line-height:24px; padding-top:40px; text-align:center;}
+.down-tips-box p a { color:#2f97b4;}
+/* Modified By GuoJinjin At 2013-06-08 end */
+
+.layers{padding:4px;clear:both; background:#d4d3d3; position:relative; margin:0 auto;}
+.layers .la,.layers .lb,.layers .lc,.layers .ld{width:4px; height:4px; position:absolute; background:url(http://dui.damai.cn/damai_v2/goods/img/bg_layers.png) no-repeat; display:block; line-height:0; font-size:0;}
+.layers .la{left:0; top:0; background-position:left top;}
+.layers .lb{right:0; top:0; background-position:right top;}
+.layers .lc{left:0; bottom:0; background-position:left bottom;}
+.layers .ld{right:0; bottom:0; background-position:right bottom;}
+.layers h2{width:100%; text-indent:10px; height:27px; background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) repeat-x scroll 0 -1090px; line-height:27px; font-weight:bold}
+.layers .inner{background:#fff;}
+.layers a.close{width:9px; height:8px; display:block; position:absolute; background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll 0 -863px; right:15px; top:14px; line-height:0; font-size:0; z-index:999;}
+.layers .pds {padding: 44px 0 80px;}
+.layer-1{ width:375px}
+.textcenter{ text-align:center}
+
+.layer_w360{ width:360px;position: fixed!important; position: absolute; left:50%; margin-left:-100px; z-index:100001; top:120px;}
+.scroll-list{ border-bottom:1px solid #e6e6e6; padding:10px; height:170px; overflow-y:scroll}
+.scroll-list dl{ border-bottom:1px dashed #858585; color:#333; line-height:25px; padding:5px 0;}
+.scroll-list dt{ font-size:14px; font-weight:bold; color:#000}
+.layer-con .btn-pb{ background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll 0 -204px;color: #474747;display:inline-block;font-size:12px;height:23px; line-height:23px;text-align:center;width:64px;}
+.layer-con .btn-pb:hover{background-position:0 -227px;}
+
+.b-scare-succeed{ background:url(http://dui.damai.cn/damai_v2/goods/img/bg-right.png) no-repeat scroll 0 35px; width:200px; padding:35px 0 0 75px; height:50px; line-height:50px; margin:0 auto 40px; color:#e51b46; font-size:36px;font-family:"黑体";}
+
+.hand-back{ background:#fffeec; border:1px solid #ffdfce; padding:10px; margin:0 10px 10px;}
+.hand-back li{*zoom:1}
+.hand-back li:after{content:'\20';display:block;height:0;clear:both;}
+.hand-back label{ width:70px; text-align:right; color:#333; float:left; line-height:25px;}
+.hand-back .hb-info{ margin-left:70px; color:#999; line-height:25px;}
+/*------------------------------------------------
+Styles Create: 2012-9-11      Author: GuoJinjin
+*Description:                  购票 end
+------------------------------------------------*/
+
+/*选项卡部分begin*/
+.final-tab-box { width: 760px; margin: 0 auto; }
+.final-tab-nav { width: 760px; height: 38px; overflow: hidden; background: url(http://dui.damai.cn/damai_v2/goods/img/tab-tittle-line.png) no-repeat 0 34px; z-index:96 }
+.final-tab-nav ul { width: 760px; height:36px; background: #fff; overflow: hidden; zoom:1; position: relative; z-index: 10; }
+.final-tab-nav ul li { float: left; height: 34px; margin-right: 3px; }
+.final-tab-nav ul li a { width: 94px; height: 34px; line-height: 34px; border: 1px solid #cccccc; color: #000; font: 16px/34px \5fae\8f6f\96c5\9ed1; display: inline-block; float: left; text-align: center; background: url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) repeat-x scroll 0 -995px; }
+.final-tab-nav ul li a.w123 { width: 123px; }
+.final-tab-nav ul li a:hover, .final-tab-nav ul li a.on { border-color: #e51b46; color: #fff; background-position: 0 -1035px; }
+.final-tab-con { width: 760px; }
+/*演出信息*/
+.tab-all-infor-all { width: 760px; margin-top: 10px; }
+.tab-txt-inner { padding: 0 35px; width: 690px; line-height: 24px; margin: 10px 0; }
+.tab-hd3 { position: relative; left: -35px; width: 725px; }
+.tab-txt-inner p { padding: 10px 0; }
+.jiathis-box { width: 760px; margin-bottom:10px;}
+.tab-Performance-information { width: 760px; margin: 10px 0 0 0; }
+.tab-hd2 { height: 40px; padding: 0 0 0 30px; font: 18px/40px \5fae\8f6f\96c5\9ed1; color: #e51a45; }
+.tab-hd2, .h3 { background: url(http://dui.damai.cn/damai_v2/goods/img/tab-tittle-line.png) no-repeat 0 36px; }
+.tab-hd2 a.fr{ font-size:12px; font-weight:normal; color:#2F97B4; font-family:宋体; line-height:50px}
+.tab-hd2 a.fr:hover{color: #e51a45}
+.tab-information-con { width: 697px; padding: 20px 32px 10px 31px; }
+.table-tr-th { height: 37px; width: 697px; overflow: hidden; background: url(http://dui.damai.cn/damai_v2/goods/img/bg_tab_bable_th.jpg) no-repeat 0 0; }
+.tab-information-con table { width: 100%; }
+.tab-information-con table tr td { text-align: center; border-bottom: 1px solid #f1f1f1; padding: 15px 0 15px 5px;color: #333;}
+.tab-information-con table tr td a{ display: inline-block; line-height: 1.5;}
+.tab-information-con table tr td.p1 { width: 57px; padding-left: 21px; color: #e51a45; text-align: left;}
+.tab-information-con table tr td.p2 { width: 291px; text-align: left; padding-left: 21px;}
+.tab-information-con table tr td.p3 { width: 195px; color: #999; text-align: left; padding-left: 21px;}
+
+/*精彩剧评*/
+.tab_comment { color: #333; margin-bottom: 40px;}
+.tab_comment .comment_con { width: 697px; padding: 20px 32px 10px 31px; }
+.tab_comment .comment_con ul{ width: 697px; overflow: hidden;}
+.tab_comment .comment_con ul li{ overflow: hidden; zoom:1; border-bottom: 1px solid #f1f1f1; margin-bottom: 15px;}
+.tab_comment .comment_con ul li a.pic{width: 59px; height: 59px; display: inline-block; overflow: hidden; float:left; margin-right: 10px;}
+.tab_comment .comment_con ul li a.pic img { width: 55px; height: 55px;border: 1px solid #ccc; padding:1px; overflow: hidden; }
+.tab_comment .comment_con .score{ width: 628px;float:left;}
+.tab_comment .comment_con .score_inner{ overflow: hidden;zoom:1;}
+.tab_comment .comment_con .score_inner strong { float: left; }
+.tab_comment .comment_con .score_inner strong a { font-weight: bold; line-height: 22px; }
+.tab_comment .comment_con .comment_txt { line-height: 22px; color: #333; padding: 10px 0; clear:both; }
+.tab_comment .comment_con .score .star em { background: url(http://dui.damai.cn/damai_v2/common/img/bg-star-1.png) repeat-x scroll 0 -15px transparent; float: left; height: 15px; margin: 4px 0 0; width: 18px; }
+.tab_comment .comment_con .score .star span.num,
+.tab_comment .comment_con .score .star span.per { padding-left:10px; color: #e51a45; font-family: Verdana; font-size: 16px; font-weight: bold; line-height: 24px; cursor: pointer; }
+.tab_comment .comment_con .score .star span.per { padding: 0; display: inline-block; height: 15px; background: url(http://dui.damai.cn/damai_v2/common/img/bg-star-1.png) repeat-x 0 0; position: absolute; left: 0; top: 4px; }
+.tab_comment .comment_con .star .pw1 { width: 9px; }
+.tab_comment .comment_con .star .pw2 { width: 19px; }
+.tab_comment .comment_con .star .pw3 { width: 27px; }
+.tab_comment .comment_con .star .pw4 { width: 35px; }
+.tab_comment .comment_con .star .pw5 { width: 45px; }
+.tab_comment .comment_con .star .pw6 { width: 55px; }
+.tab_comment .comment_con .star .pw7 { width: 63px; }
+.tab_comment .comment_con .star .pw8 { width: 73px; }
+.tab_comment .comment_con .star .pw9 { width: 81px; }
+.tab_comment .comment_con .star .pw10 { width: 88px; }
+.tab_comment .comment_con .score_user{ overflow: hidden; zoom:1; height: 18px; line-height: 18px; position:relative; top:-3px}
+.tab_comment .comment_con .star,
+.tab_comment .comment_con .user_respond { float: right; position: relative; z-index: 5; }
+.tab_comment .comment_con .user_name { display: inline-block; color: #2f97b4; margin-right: 10px; }
+.tab_comment .comment_con .user_name:hover { color: #e51a45;}
+/*红色背景按钮*/
+.tab_comment .comment_con .comment_btn {text-align: right; }
+.tab_comment .comment_con .comment_btn a,.sure button,.tab-ask-btn {width: 90px; height: 26px; border: medium none; text-align: center; color: #fff; cursor: pointer; background: url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat -269px -136px; margin-left: 15px; }
+.tab_comment .comment_con .comment_btn a{ display: inline-block; line-height: 26px;}
+.tab_comment .comment_con .comment_btn a:hover,
+.sure button:hover,.tab-ask-btn:hover{background-position:-269px -162px;}
+
+/*大麦答疑*/
+.tab-Answering-question { width: 760px; margin: 10px 0 0 0; }
+.tab-Answering-ul { float: right; margin-top: 5px; }
+.tab-Answering-ul li { float: left; margin-left:5px; height: 33px; }
+.tab-Answering-ul li a { height: 32px; text-align: center; display: inline-block; padding: 0 20px; color: #000; font: 16px/32px \5fae\8f6f\96c5\9ed1; border: 1px solid #ccc; border-bottom: none; background: url(http://dui.damai.cn/damai_v2/goods/img/bg_Answering_ul_li.png) repeat-x 0 0; overflow: hidden; }
+.tab-Answering-ul li a.on, .tab-Answering-ul li a:hover { color: #fff; border-color: #e51b46; background-position: 0 -33px }
+.tab-question-con { width: 697px; padding: 10px 32px 10px 31px; }
+.tab-question-con ul li{ padding-bottom:20px}
+.tab-question-con ul li p { width: 657px; padding:10px 20px; line-height:25px; color: #333; }
+.tab-question-con ul li .tab-question-questioner { border-bottom: 1px solid #e9e9e9; line-height: 20px; }
+.tab-question-con ul li .tab-question-questioner strong { font-weight: bold; float: left; }
+.tab-question-con ul li .tab-question-questioner span { float: right; }
+.tab-reply{ margin-top:-10px}
+.tab-reply .t { width: 697px; height: 11px; background: url(http://dui.damai.cn/damai_v2/goods/img/tab-tittle-line.png) no-repeat 0 -89px; overflow: hidden; }
+.tab-reply .con { width: 667px; padding: 8px 15px; background: url(http://dui.damai.cn/damai_v2/goods/img/bg_reply_con.png) repeat-y 0 0; line-height: 24px; color: #666; text-indent: 2em; }
+.tab-reply .btm { width: 697px; height: 4px; background:url(http://dui.damai.cn/damai_v2/goods/img/tab-tittle-line.png) no-repeat 0 -105px;overflow:hidden }
+.tab-reply .con span { height: 30px; line-height: 30px; color: #e51a45; display: block; text-align: right; }
+.tab-look-mine { height: 38px; line-height: 38px; }
+.tab-look-mine a, .tab-ask-txtin p.s1 span a { color: #2f97b4 }
+.tab-look-mine a:hover, .tab-ask-txtin p.s1 span a:hover { color: #e51a45 }
+.tab-ask-txtin { border: 1px solid #efefef; }
+.tab-ask-txtin p.s1 { height: 40px; line-height: 40px; background: #f7f7f7; padding:0 20px; }
+.tab-ask-txtin p.s1 span { color: #999; }
+.tab-nodata-text { background: #ffffd1; border: 1px solid #ffdeb6; color: #b6b6aa; line-height: 34px; padding-left: 10px; margin: 15px 0; }
+.tab-ask-in { padding: 20px; }
+.tab-ask-in p { padding: 5px 0; }
+.tab-ask-in p label { font-size: 12px; line-height:24px; }
+.tab-ask-in p.input input { height: 12px; padding: 5px; line-height: 12px; color: #666; border: 1px solid #ddd; vertical-align: middle; margin-right: 10px; }
+.tab-textarea { width: 570px; padding: 5px; height: 76px; line-height: 16px; border: 1px solid #ddd; vertical-align: text-top; overflow-y: auto; color: #666; }
+.tab-ask-in p.hiden { display: none; }
+.tab-ask-in p img { cursor: pointer; vertical-align: middle; }
+
+.tab-answering-ul-2 { overflow: hidden; zoom: 1; font-size: 14px; line-height:18px; padding: 20px 32px 20px 31px; font-family: \5fae\8f6f\96c5\9ed1;}
+.tab-answering-ul-2 li { float: left;}
+.tab-answering-ul-2 li.li2 { margin-left: 10px; padding-left: 10px; border-left: 1px solid #999;}
+.tab-answering-ul-2 li a { color: #999;}
+.tab-answering-ul-2 li a:hover,.tab-answering-ul-2 li a.on { color: #e51a45;}
+/*购票说明*/
+.tab-buyticket-explain { width: 700px; padding: 0 30px 30px 30px; }
+.tab-explain-dl { padding: 20px 0; line-height:22px; border-bottom:1px dashed #ccc; }
+.tab-explain-dl dt { padding-left: 15px; margin:0 0 5px 0; font: 16px/22px \5fae\8f6f\96c5\9ed1; background: url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat 0 -938px; }
+.tab-explain-dl dd { color: #666; padding:5px 0 0 15px; }
+.tab-explain-dl dd .hot-line { font-size: 22px; color: #e51a45; font-family: Arial, Helvetica, sans-serif; }
+.tab-explain-dl dd span { color: #e51a45; display: inline-block; padding:2px 0 2px 0; }
+.tab-explain-dl dd a { color: #2f97b4; }
+.tab-explain-dl dd a:hover { color: #e51a45; }
+/*付款方式*/
+.tab-payment-mode { width: 700px; padding: 0 30px 30px 30px; overflow: hidden; }
+.tab-explain-ul-list { width: 700px; }
+.tab-explain-ul-list li { width: 107px; height: 25px; display:inline-block; float: left; margin: 5px 0 20px 5px; }
+.tab-explain-ul-list li img { width: 107px; height: 25px; overflow: hidden; }
+/*先付先抢*/
+.tab-Pay-grab { width: 760px; color: #666; }
+.h3 { height: 40px; font: 16px/40px \5fae\8f6f\96c5\9ed1; background-position: 0 -7px; color: #333; padding:0 0 15px 2px; }
+.h3 strong { color: #e51a45; font-size: 20px; margin-right: 5px; }
+.tab-grab-detail, .tab-grab-wireless, .tab-grab-tips { margin: 30px 0 0 30px; }
+.tab-grab-detail p, .tab-grab-wireless p, .tab-grab-tips p { width: 650px; line-height: 28px; margin-bottom: 8px; }
+.tab-grab-detail a { width: 622px; height: 168px; overflow: hidden; display: block; margin:40px 22px; }
+.tab-ul-txt { width: 650px; }
+.tab-ul-txt li { line-height: 18px; padding-left: 15px; background: url(http://dui.damai.cn/damai_v2/goods/img/bg_tab_ul_txt_li.png) no-repeat 5px 6px; margin: 5px 0 0 0; }
+.tab-grab-map-tis { width: 668px; height: 99px; padding: 10px 0; background: url(http://dui.damai.cn/damai_v2/goods/img/bg_you_know.png) no-repeat center 18px; margin: 65px 0; }
+.tab-grab-map-tis a.mtn { margin-top: 8px; }
+/*选项卡部分end*/
+
+
+/*内容区右侧 By CaoNing*/
+.goods-side .right_title { height:39px; line-height:39px; font-size:16px; border-bottom:1px solid #efefef; padding-left:20px; background:#f7f7f7;font-family:Microsoft YaHei;}
+
+.right_serve,
+.right_mobile,
+.right_spe,
+.right_weibo,
+.right_history,
+.right_hot,
+.right_star,
+.right_venue { border:1px solid #efefef; margin-bottom:10px;}
+
+/*服务专区 By CaoNing*/
+.right_serve .serve_con { padding:0 22px;}
+.right_serve .serve_con ul { height:95px; border-bottom:1px solid #efefef; background:url(http://dui.damai.cn/damai_v2/goods/img/bg_serve.png) no-repeat 0 20px;}
+.right_serve .serve_con li { width:92px; float:left; }
+.right_serve .serve_con li a { display:block; height:20px; line-height:20px; text-align:center; padding:60px 0 15px;}
+.right_serve .serve_con p { height:54px; line-height:54px;font-family:Microsoft YaHei; font-size:14px; text-align:center;}
+.right_serve .serve_con p span { color:#e51a45; font-size:18px;}
+
+/*精彩专题 By CaoNing*/
+.right_spe .spe_con { padding:9px;}
+.right_spe .spe_con p a { display:block; width:190px; height:34px; line-height:34px; text-align:center; padding:0 10px; color:#fff; background:#f47892;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.right_spe .spe_con p a:hover { color:#e51a45;}
+
+/*浏览历史 By CaoNing*/
+.right_history .history_con { margin:10px;}
+.right_history .history_con li a { display:block; width:188px; height:35px; line-height:35px; border-top:1px dashed #dcdcdc; padding-left:20px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat 8px -1205px;}
+.right_history .history_con .first a { border:none;}
+
+/*热点推荐 By CaoNing*/
+.right_hot .hot_con { width:184px; margin:10px auto;}
+.right_hot .hot_con li { padding:10px 0 5px; border-top:1px dashed #e9e9e9;}
+.right_hot .hot_con .first { border:none;}
+.right_hot .hot_con li .hot_img { padding:4px; background:#e9e9e9; width:171px; margin:0 auto}
+.right_hot .hot_con li h4 { height:36px; line-height:18px; font-weight:bold; text-align:center; overflow:hidden; margin-top:5px;}
+.right_hot .hot_con li h4 a { display:block;}
+.right_hot .hot_con li p { height:24px; line-height:24px; color:#909090; text-align:center;}
+
+/*明星团体 By CaoNing*/
+.right_star .star_con { width:200px; padding:15px 0; margin:0 auto}
+.right_star .star_con .star_img { display:block; width:90px; height:90px; padding:4px; border:1px solid #efefef;}
+.right_star .star_con .star_img:hover { border: 1px solid #e51a45;}
+.right_star .star_con dl { width:85px; margin-left:15px;}
+.right_star .star_con dt { font-weight:bold; line-height:22px; margin-bottom:5px;}
+.right_star .star_con dd { color:#999; line-height:18px;}
+.right_star .star_con ul { padding:5px 0 15px;}
+.right_star .star_con li { height:25px; line-height:25px;}
+.right_star .star_con li a { display:inline-block; width:85px; color:#2f97b4;}
+.right_star .star_con li a:hover { color: #e51a45;}
+.right_star .star_con li em { color:#d9d9d9; padding: 0 8px;}
+
+.right_star .star_con .star_join a { display:block; width:138px; height:24px; text-align:center; font-size:14px; line-height:24px; color:#fff; background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll 0 -284px; margin:0 auto; cursor:pointer}
+.right_star .star_sub { width:220px; border-top:1px dashed #e6e6e6; margin:0 auto; }
+.right_star .star_sub .star_sub_con { margin:1px 0;padding:10px 15px 5px; background:#f2f2f2;}
+.right_star .star_sub .star_sub_con p { line-height:1.5; color:#333;}
+.right_star .star_sub .star_sub_con p span { color:#2f97b4; padding: 0 2px;}
+.right_star .star_sub .star_sub_con ul { padding:10px 0;}
+.right_star .star_sub .star_sub_con li { padding-bottom:8px; overflow:hidden; zoom:1;}
+.right_star .star_sub .star_sub_con li span { display:block; float:left; width:50px; height:24px; line-height:24px; color:#999;}
+.right_star .star_sub .star_sub_con li input { width:130px; height:14px; line-height:14px; border:1px solid #ccc; padding:4px; float:left;}
+.right_star .star_sub .star_sub_con li button { width:90px; height:26px; line-height:26px; color:#fff; text-align:center; background:url(http://dui.damai.cn/damai_v2/goods/img/bg_btn.png) no-repeat; cursor:pointer; margin-left:53px; border: none;}
+.right_star .star_sub .star_sub_con li button:hover { background-position:0 -26px;}
+.right_star .star_sub .star_sub_con li p { line-height:20px; text-align:center; margin-bottom:6px; color:#e51a45;}
+.right_star .star_con .h-dash{ margin-top:15px; padding-top:15px; border-top:1px dashed #EFEFEF}
+
+/*场馆订阅 By JiangKai*/
+.right_venue .venue_con { width:200px; margin:15px auto;}
+.right_venue .venue_sub { width:220px; margin:0 auto; position:relative;}
+.right_venue .venue_sub .venue_sub_con { padding:10px 15px 5px;}
+.right_venue .venue_sub .venue_sub_con p { line-height:1.5; color:#333;}
+.right_venue .venue_sub .venue_sub_con p em,
+.right_venue .venue_sub .venue_sub_con p em a { color:#2f97b4;}
+.right_venue .venue_sub .venue_sub_con p em a:hover { color:#e51a45;}
+.right_venue .venue_sub .venue_sub_con p span { display:inline-block; color:#2f97b4; padding: 0 3px;}
+.right_venue .venue_sub .venue_sub_con p span a { display:inline-block; width:9px; height:8px; padding:0 2px; background:url(http://dui.damai.cn/damai_v2/common/img/ico-close-1.png) no-repeat 2px 0; vertical-align:middle;}
+.right_venue .venue_sub .venue_sub_con ul { padding:10px 0;}
+.right_venue .venue_sub .venue_sub_con li { padding-bottom:8px; overflow:hidden; zoom:1;}
+.right_venue .venue_sub .venue_sub_con li span { display:block; font-weight:bold; height:24px; line-height:24px;}
+.right_venue .venue_sub .venue_sub_con li input { width:180px; height:14px; line-height:14px; border:1px solid #ccc; padding:4px;}
+.right_venue .venue_sub .venue_sub_con li button { width:140px; height:26px; line-height:26px; color:#fff; text-align:center; background:url(http://dui.damai.cn/damai_v2/goods/img/bg_btn.png) no-repeat; cursor:pointer; margin:5px 0 0 25px; border: none;}
+.right_venue .venue_sub .venue_sub_con li button:hover { background-position:0 -26px;}
+.right_venue .venue_sub .venue_sub_con li .venue_sub_btn,
+.right_venue .venue_sub .venue_sub_con li .venue_sub_btn:hover { background-position:0 -200px; cursor:default; color:#eee}
+.right_venue .venue_sub .venue_sub_con li p { display:none; line-height:20px; text-align:center; color:#e51a45;}
+.sub-con .infos .venue_sub_box { display:none; width:216px; height:110px; position:absolute; bottom:10px; left:3px; border: 2px solid #b8e0e5; background:#eefcff;}
+.sub-con .infos .venue_sub_box .venue_sub_del { display:block; width:10px; height:10px; float:right; background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll 0 -904px; margin:5px 5px 0 0;}
+.sub-con .infos .venue_sub_box p { line-height:24px; padding-top:40px; text-align:center;}
+.sub-con .infos .venue_sub_box p a { color:#2f97b4;}
+
+.right_weibo .weibo_con { height:525px;}
+.right_mobile { width:228px; height:105px; overflow:hidden;}
+
+/*右侧防诈骗 By CaoNing*/
+.right_anti { border:1px solid #efefef;}
+.right_anti .right_title { position:relative; height:39px; line-height:39px; font-size:16px; border-bottom:1px solid #efefef; padding-left:20px; background:url(http://dui.damai.cn/damai_v2/goods/img/bg_title.png) repeat;font-family:Microsoft YaHei;}
+.right_anti .right_title span { display:block; width:20px; height:20px; position:absolute; right:18px; top:12px; background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat -365px -165px;}
+.right_anti .anti_con { padding:15px 14px 20px;}
+.right_anti .anti_con .anti_img { display:block; width:198px; height:69px; border:1px solid #e2e1e1; margin-bottom:10px;}
+.right_anti .anti_con ul { background:#f5f5f5;border:1px solid #e2e1e1; padding-top:5px; }
+.right_anti .anti_con li a { display:block; width:183px; height:22px; line-height:22px; background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat 4px -1211px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding-left:15px; margin-bottom:2px;}
+.right_anti .anti_con .anti_cartoon { height:36px; line-height:36px;}
+.right_anti .anti_con .anti_add { height:40px; line-height:40px; border-top:1px dotted #aaa; border-bottom:1px solid #aaa; margin-bottom:15px; background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat right -1265px;}
+.right_anti .anti_con .anti_btn button { width:82px; height:37px; line-height:37px; font-size:14px; text-align:center; color:#fff; background:url(http://dui.damai.cn/damai_v2/goods/img/bg_btn.png) no-repeat 0 -52px; cursor:pointer; text-shadow:-1px 1px 0 #d73b01;}
+.right_anti .anti_con .anti_btn button:hover { background-position:0 -89px;}
+.right_anti .anti_con .anti_btn .anti_real { width:108px; background-position:0 -126px; margin-left:5px; text-shadow:-1px 1px 0 #3499c8;}
+.right_anti .anti_con .anti_btn .anti_real:hover { background-position:0 -163px;}
+
+.tips-y-b { border: 2px solid #b8e0e5; position: fixed; background-color: #ddd; top: 50%; left: 50%; height: 50px; margin: -26px 0 0 0; display: none; box-shadow: 1px 1px 3px #ddd; z-index: 100000;}
+.tips-y-b-con { height: 50px; background: #f1fafe url(http://dui.damai.cn/damai_v2/common/img/ico-warn.png) 30px 18px no-repeat;}
+.tips-y-b-con p { line-height: 50px; color: #666; font-size: 14px; padding: 0 35px 0 65px;}
+
+.tips-a-b { border: 2px solid #f37691; position: fixed; background-color: #ddd; top: 50%; left: 50%; height: 50px; margin: -26px 0 0 0; display: none; box-shadow: 1px 1px 3px #ddd; z-index: 100000;}
+.tips-a-b-con { height: 50px; background: #fef1f3 url(http://dui.damai.cn/damai_v2/common/img/ico-warn.png) 30px -82px no-repeat;}
+.tips-a-b-con p { line-height: 50px; color: #666; font-size: 14px; padding: 0 35px 0 65px;}
+
+.tips-n-b { border: 2px solid #c0ed81; position: fixed; background-color: #ddd; top: 50%; left: 50%; height: 50px; margin: -26px 0 0 0; display: none; box-shadow: 1px 1px 3px #ddd; z-index: 100000;}
+.tips-n-b-con { height: 50px; background: #feffe5 url(http://dui.damai.cn/damai_v2/common/img/ico-warn.png) 30px -32px no-repeat;}
+.tips-n-b-con p { line-height: 50px; color: #666; font-size: 14px; padding: 0 35px 0 65px;}
+
+/*购物车弹层*/
+.layer660{ width:510px}
+.layer-inner{ padding:10px; background:#fff;*zoom:1; max-height:500px;_height:500px;overflow-y:auto; *position:relative}
+.layer-inner:after,.layer-inner .top_con:after{content:'\20';display:block;height:0;clear:both;}
+.layer-inner h4{ font-size:14px; color:#2b2b2b; font-weight:bold; padding:5px 0 10px}
+.layer-inner .top_con{*zoom:1}
+.layer-inner .top_con .img img,.layer-inner .item-info .img img{ width:109px; height:144px; padding:5px;background:#f2f2f2; border:1px solid #d6d6d6; float:left;}
+.layer-inner .top_con dd{ padding-left:137px; line-height:25px} 
+.keep-buy-btn{ background:url(http://dui.damai.cn/damai_v2/common/img/gou.png) no-repeat; width:90px; height:26px; display:inline-block}
+.keep-buy-btn:hover{background-position:0 -26px;}
+.settle-btn{background:url(http://dui.damai.cn/damai_v2/common/img/gou.png) no-repeat scroll -90px 0; width:118px; height:26px; display:inline-block}
+.settle-btn:hover{background-position:-90px -26px;}
+
+.layer-inner .item-info{ background:#fdf9f5; border:1px solid #fde6cf; padding:5px 5px 10px 20px; position:relative; height:250px}
+.layer-inner .item-info li{width:130px; float:left; margin-right:20px; _display:inline}
+.layer-inner .item-info p{ line-height:20px}
+#scroll_ul{width:9999px; position:relative;}
+#scroll_inner{width:430px; overflow: hidden; position:absolute;left:20px; top:35px;}
+#right_scroll{ position:absolute; right:0; top:103px; background:url(http://dui.damai.cn/damai_v2/common/img/next-j.jpg) no-repeat; width:16px; height:59px; overflow:hidden; display:block; cursor:pointer}
+#right_scroll:hover{background-position:0 -59px;}
+
+.layer-inner .tab1{ border:1px solid #ccc;}
+.layer-inner .tab1 th,.layer-inner .tab1 td{ border:1px solid #ccc; text-align:center; line-height:18px; color:#333; padding:3px 0}
+.layer-inner .tab1 th{ font-weight:bold;}
+.layer-inner .tab1 .red{ color:#E51A45; font-weight:bold}
+.layer-inner .tab1 .tr{ text-align:right}
+.layer-inner .tab1 .tl{ text-align:left;}
+.layer-inner .tab1 p{ padding:0 5px}
+.layer-inner-bt{ text-align:right; padding:15px 0}
+.nav ul.nav-common{margin: 0 0 0 210px; _display:inline}
+.layer-inner .item-info .img{width:119px; height:154px; display:block}/*  Modified By GuoJinjin At 2013-07-22 13:15 */
+.g_txt { height:40px; overflow:hidden; clear:both}/*  Modified By GuoJinjin At 2013-07-22 13:15 */
+/*2012-12-7 订阅   Author: GuoJinjin */
+.sub-con{ padding-bottom:20px; position:relative;_zoom:1}
+.sub-con .txt{ border-bottom:1px solid #efefef; line-height:44px; color:#000; padding-left:25px; background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll -454px -176px; margin:0 15px}
+.sub-con .infos ul{ display:block; margin:5px 15px 5px 15px; overflow:hidden}
+.sub-con .infos li{ float:left;margin:3px 5px 3px 0; display:inline; border:1px solid #dcdcdc;line-height:24px; } 
+.sub-con .infos li label{ border:1px solid #f8f8f8; background:#f0f0f0; color:#666; line-height:22px; padding-left:5px; padding-right:10px; float:left; display:block; _padding:5px 10px 1px 5px; /*white-space:nowrap*/}
+.sub-con .infos li:hover,.sub-con .infos li.on{ border:1px solid #ffeecc;}
+.sub-con .infos li:hover label,.sub-con .infos li.on label{ border:1px solid #fff8e9; background:#fff8e9;}
+.sub-con .infos li .check-fl{ clear:both}
+.sub-con .infos li .check-fl .check-fl-w1{ width:15px; float:left; margin-top:5px;*margin-top:3px; *display:inline}
+.sub-con .infos li .check-fl .check-fl-w2{ width:145px; float:left;*display:inline}
+.sub-con .infos .info-bt{border-top:1px solid #efefef;margin:0 15px;}
+.sub-con .infos .info-bt .i-a{ background:url(http://dui.damai.cn/damai_v2/goods/img/icon_a.png) no-repeat scroll right 5px; padding-right:10px;color:#2f97b4; }
+.sub-con .infos .info-bt .i-a.on{background-position:right -48px; }
+.sub-con .infos .info-bt .i-a:hover{color:#E51A45}
+.sub-con .infos .info-bt .inp{ border:1px solid #e3e9ef; border-top:1px solid #abadb3; height:14px; overflow:hidden; line-height:14px; padding:5px; color:#999; width:188px; margin:0 auto 15px}
+.sub-con .infos .btn-subrss{ background:#E51B46; width:140px; height:31px; color:#fff; font-size:14px; cursor:pointer; border:none;}
+.sub-con .infos .btn-subrss:hover{ background:#ff5882}
+.tab_comment .comment_con .score-tv{ color:#666}
+
+.side-item-icon,.side-item-icon2{ background:url(http://dui.damai.cn/damai_v2/goods/img/side-icon24-1.png) no-repeat scroll 0 -80px;_background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll -390px -80px; width:80px; height:80px; position:absolute; z-index:89; top:31px; right:-3px}
+.side-item-icon a,.side-item-icon2 a{width:80px; height:80px; display:block}
+.side-item-icon2{background:url(http://dui.damai.cn/damai_v2/goods/img/side-icon24-1.png) no-repeat;_background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll -390px 0;}
+
+
+/*2013-06-25 点将终极页优化   Author: GuoJinjin */
+.dj-live-lists { width:510px; background:#fff; border:1px solid #efefef; padding:0 9px; overflow:hidden; margin-top:15px;}
+.dj-live-lists .tit { height:29px; line-height:29px; padding-left:5px; border-bottom:1px dashed #efefef; font-size:14px; color:#666; font-family:"Micrsoft YaHei"; font-weight:bold}
+.dj-live-lists ul { margin:5px 0; background:url(http://dui.damai.cn/damai_v2/goods/img/dj-list-bg.png) repeat-y scroll 249px 0; width:530px; overflow:hidden;zoom:1}
+.dj-live-lists ul li { width:242px;padding-left:5px; float:left; line-height:25px; color:#666; margin-right:15px;}
+.dj-live-lists ul li a { color:#2f97b4; padding:0 5px;}
+.dj-live-lists ul li a:hover { color:#E51A45}
+
+
+/*2013-09-05 点将终极页优化   Author: GuoJinjin */
+.b-prepay-state02 { padding:10px 0; text-align:center; line-height:20px;}
+
+/*2013-07-03 大麦无线添加广告投放*/
+.dm_wap{position:relative; top:-59px; margin-bottom:-49px}
+
+/*2013-09-05 点将终极页优化   Author: GuoJinjin */
+.b-prepay-state02 { padding:10px 0; text-align:center; line-height:20px;}
+
+/* Modified By GuoJinjin At 2013-12-10   大麦网5.0终极页加速优化*/
+.b-line01 { border-top:1px dotted #E0E0E0; border-bottom:1px solid #fff; height:0; margin:0 7px; overflow:hidden; font-size:0; line-height:0;zoom:1 }
+.b-show-inform { padding:10px 12px 35px;}
+.b-show-inform .b-tit{ color:#FF0066; font-size:16px; padding:10px 0}
+.b-show-inform p { color:#666; line-height:25px;}
+.btn-subscription { background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll -139px -238px; width:80px; height:25px; border:none; cursor:pointer; *vertical-align:middle}
+.btn-subscription:hover { background-position:-139px -263px;}
+.b-asks .b-asks-info { font-size:14px; padding:15px 0; color:#666;}
+.b-asks .b-asks-subbox { background:#e41b47; height:60px; overflow:hidden; width:500px; margin-bottom:15px;}
+.b-asks .b-asks-inp { height:16px; padding:11px 10px; width:338px; margin:11px; display:inline; float:left; background:#fff; border:none; color:#666;}
+.b-asks .b-asks-btn { background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll -269px -188px; width:120px; height:60px; border:none; cursor:pointer; text-indent:-9999px; display:block; float:left;}
+.b-asks .b-asks-btn:hover {background-position:-269px -248px;}
+.b-buy-status { color:#666; line-height:21px; margin-bottom:15px;}
+.b-buy-status span { background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll -64px -204px; width:60px; height:21px; padding-right:3px; line-height:21px; text-align:center; color:#fff; margin-right:10px; display:inline-block}
+
+/*-----------------------------------------------------------
+　Modified By:		CaoNing
+　Modified Time:	2014-04-22 16:00
+-------------------------------------------------------------*/
+.b-select-price dd a.app { border:1px dashed #c7c7c7; background:#ffebeb; }
+.b-select-price dd a.app:hover { border:1px solid #e51a45; background:#fff; }
+
+.down-a4 .down-a4-app { padding:10px 0; overflow:hidden; *zoom:1; }
+.down-a4-app a { display:block; width:152px; height:40px; margin-right:10px; text-indent:-999em; background:url(http://dui.damai.cn/damai_v2/goods/img/bg_app.png) no-repeat; float:left; }
+.down-a4-app .down-a4-app-iphone { background-position:0 -300px; }
+.down-a4-app .down-a4-app-ipad { background-position:0 -380px; }
+.down-a4-app .down-a4-app-android { background-position:0 -460px;}
+.down-a4-app .down-a4-app-iphone:hover { background-position:0 -340px; }
+.down-a4-app .down-a4-app-ipad:hover { background-position:0 -420px; }
+.down-a4-app .down-a4-app-android:hover { background-position:0 -500px;}
+
+.layer_w640 { width:632px; height:262px; position:fixed; left:50%; top:50%; margin:-135px 0 0 -320px; z-index:100001; }
+.layer_down { height:235px; overflow:hidden; *zoom:1; }
+.layer_down .down_code { width:127px; margin:40px 30px 0 40px; float:left; }
+.layer_down .down_code .down_img { display:block; width:105px; height:105px; padding:10px; border:1px solid #cac9ca; overflow:hidden; }
+.layer_down .down_code p { line-height:22px; padding-top:5px; text-align:center; }
+.layer_down .down_btn { width:400px; padding-top:48px; float:left; }
+.layer_down .down_btn a { display:block; width:190px; height:50px; margin:0 10px 10px 0; text-indent:-999em; background:url(http://dui.damai.cn/damai_v2/goods/img/bg_app.png) no-repeat; float:left; }
+.layer_down .down_btn .down_ipad { background-position:0 -100px; }
+.layer_down .down_btn .down_android { background-position:0 -200px; }
+.layer_down .down_btn .down_iphone:hover { background-position:0 -50px; }
+.layer_down .down_btn .down_ipad:hover { background-position:0 -150px; }
+.layer_down .down_btn .down_android:hover { background-position:0 -250px; }
+
+
+/*-----------------------------------------------------------
+　Modified By:		GuoJinjin
+　Modified Time:	2014-05-30 15:00
+-------------------------------------------------------------*/
+.b-pri-tickets { border:1px solid #e41b46; width:482px; height:43px; overflow:hidden}
+.b-pri-text {border:1px solid #e41b46; height:21px; width:352px; padding:10px 15px; overflow:hidden; color:#333; float:left;}
+.b-pri-btn { width:98px; height:43px; font-size:16px; color:#fff; font-family:"Microsoft YaHei"; line-height:43px; text-align:center; cursor:pointer; border:none; background:url(http://dui.damai.cn/damai_v2/goods/img/btn_buy.png) no-repeat scroll 0 -333px;}
+.b-pri-btn:hover { background-position:0 -377px;}
+.b-pri-tips {font-family:"Microsoft YaHei"; line-height:30px; color:#e41b46; margin-bottom:10px;}
+.b-pri-infos { border:1px solid #e9e9e9; background:#fff; padding:15px 15px 20px; color:#666; line-height:28px;}
+.b-pri-login { line-height:30px; color:#333; margin-bottom:10px; }
+.b-pri-login a { color:#e41b46; margin:0 8px;}
+.b-pri-login a:hover { text-decoration:underline}
+
+/*-----------------------------------------------------------
+　Modified By:		CaoNing
+　Modified Time:	2014-06-18 10:00
+-------------------------------------------------------------*/
+.tab-ask-in .tab-ask-tips { line-height:22px; text-align:center; padding:80px 0; }
+.tab-ask-in .tab-ask-tips a { color:#e51a45; margin:0 5px; }
+.tab-ask-in .tab-ask-tips a:hover { text-decoration:underline; }
+
+#jquery-overlay{position:absolute;top:0;left:0;z-index:200001;width:100%;height:500px;}#jquery-lightbox{position:absolute;top:0;left:0;width:100%;z-index:200002;text-align:center;line-height:0;}#jquery-lightbox a img{border:none;}#lightbox-container-image-box{position:relative;background-color:#fff;width:250px;height:250px;margin:0 auto;}#lightbox-container-image{padding:10px;}#lightbox-loading{position:absolute;top:40%;left:0;height:25%;width:100%;text-align:center;line-height:0;}#lightbox-nav{position:absolute;top:0;left:0;height:100%;width:100%;z-index:8888;}#lightbox-container-image-box>#lightbox-nav{left:0;}#lightbox-nav a{outline:none;blr:expression(this.onFocus=this.blur());}#lightbox-nav-btnPrev,#lightbox-nav-btnNext{width:49%;height:100%;zoom:1;display:block;}#lightbox-nav-btnPrev{left:0;float:left;}#lightbox-nav-btnNext{right:0;float:right;}#lightbox-container-image-data-box{font:10px Verdana,Helvetica,sans-serif;background-color:#fff;margin:0 auto;line-height:1.4em;overflow:auto;width:100%;padding:0 10px 0;}#lightbox-container-image-data{padding:0 10px;color:#666;}#lightbox-container-image-data #lightbox-image-details{width:70%;float:left;text-align:left;}#lightbox-image-details-caption{font-weight:bold;}#lightbox-image-details-currentNumber{display:block;clear:left;padding-bottom:1.0em;}#lightbox-secNav-btnClose{width:66px;float:right;padding-bottom:.7em;}
